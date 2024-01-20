@@ -1,0 +1,157 @@
+html{
+  font-size:1rem;
+}
+*{
+  box-sizing:border-box;
+}
+body{
+  background-color:#fff700; 
+  width:100%;
+  height:100%;
+  margin:0;
+}
+hr{
+  border:1px solid black;
+}
+h1{
+  text-align:center;
+  margin:25px auto;
+  color:#Ff0000;
+  font-weight:bold;
+  Font-family:Sans-serif;
+  }
+p{
+  text-align:center;
+  color:#000000;
+  font-family:Arial-black;
+}
+#survey-form{
+ padding:10px 20px 10px 20px;
+  height:100%;
+}
+fieldset {
+  color:black;
+  margin:auto;
+  font-family:Arial-black;
+  border-radius:10px;
+  background:#ffee00;
+  border:2px solid black;
+  width:100%;
+}
+.idea{
+    display:flex;
+    flex-direction:column;
+    }
+#name,#email,#dropdown,#number{
+  width:22em;
+  height:5em;
+  background-color:white;
+  text-align:center;
+  border:1px solid black;
+}
+#number{
+  margin-left:82px;
+}
+input[class="inp"]{
+  margin-left:1px;
+}
+::placeholder{
+  color:black;
+  text-transform:Uppercase;
+}
+.comment{
+  width:33em;
+  height:5em;
+  background-color:white;
+  text-align:center;
+  border:1px solid black;
+  resize:none;
+}
+#submit{
+  background-color:grey;
+  height:60px;
+  width:300px;
+  border:2px solid black;
+  border-radius:5px;
+  display:block;
+  font-size:30px;
+  margin:5px auto;
+}
+#submit:hover{
+  background-color:white;
+}
+@media only screen and (min-width:992px){
+  html{
+    font-size:20px;
+  }
+  fieldset{
+    width:900px;
+    height:500px;
+  }
+  .idea{
+    height:250px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
+  option{
+  font-size:24px;
+}
+  .comment{
+  width:65em;
+  height:13em;
+  background-color:white;
+  text-align:center;
+  border:1px solid black;
+  resize:none;
+}
+}
+@media only screen and(max-width:600px){
+  html{
+    font-size:20px;
+  }
+  fieldset{
+    width:900px;
+    height:500px;
+    margin:0;
+  }
+  .idea{
+    height:250px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
+  option{
+  font-size:24px;
+}
+  .comment{
+  width:95em;
+  height:13em;
+  background-color:white;
+  text-align:center;
+  border:1px solid black;
+  resize:none;
+}
+}
+@media(prefers-color-scheme:dark){
+  body{
+  background-color:#242526;
+  }
+  h1{
+    color:#03dac6;
+  }
+  p{
+    color:white;
+  }
+  hr{
+    border:1px solid #e4e6eb;
+  }
+  fieldset{
+    background-color:#3a3b3c;color:whitesmoke;
+    border:2px solid #e4e6eb;
+  }
+}
