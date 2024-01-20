@@ -1,0 +1,92 @@
+*{
+margin:0;
+border:0px;
+scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    height:100%;
+    width: 100%;
+}
+.king{
+    width: 200px;
+    height: 200px;
+    position:relative;
+    left:45%;
+    top:230px;
+    transform-origin: 50% 50%;
+    animation-name:king;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform-style:preserve-3d;
+    perspective:1000px;
+    transition: all 1s;
+    
+}
+.cube{
+    width: 200px;
+    height:200px;
+    position: absolute;
+    background: linear-gradient(#272727 30%,aqua 70%);
+    transform-style: preserve-3d;
+    opacity:0.6;
+}
+.right{
+    right:99px;
+    top: -1px;
+    transform: rotateY(90deg);
+}
+.left{
+    left:100px;
+    transform: rotatey(90deg);
+    
+}
+.front{
+    transform: translateZ(96px);
+}
+.back{
+    transform: translateZ(-96px);
+
+ }
+ .top{
+    width: 200px;
+    height:200px;
+    position:absolute;
+     top:100px;
+     transform:rotateX(90deg);
+     background:linear-gradient(aqua,cyan);
+     
+    }
+ .down{
+        width: 200px;
+        height:200px;
+        position:absolute;
+        bottom:100px;
+        transform: rotateX(90deg);
+        background-color:#272727;
+ }
+ .shadow{
+    width: 190px;
+    height: 190px;
+    position:relative;
+    transform: rotateX(90deg);
+    top: 150px;
+    background-color:aqua;
+    box-shadow: 0 0 10px 10px cyan;
+    filter: blur(40px);
+ }
+@keyframes king{
+0%{
+    transform: rotateX(-30deg) rotatey(0deg);
+}
+100%{
+    transform: rotateX(-30deg) rotatey(360deg);
+}
+}
+@media only screen and (max-width:600px){
+    .king{
+        left:29%;
+        top:225px;
+    }
+}
