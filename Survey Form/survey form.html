@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <h1 id="title">Code Survey Form</h1><hr>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+      <main>
+        <section>
+          <form id="survey-form">
+            <fieldset class="idea">
+              <label for="name" id="name-label"> Enter your name
+                <input type="text" id="name" placeholder ="enter your name" required class="inp" >
+                </label><br>
+              <label for="email" id="email-label">Enter your email
+                <input type="email" id="email" placeholder="enter your email" required>
+                </label><br>
+                <label for="number" id="number-label"> Age<input type="number" id="number" min="13" max="120" placeholder="age" ></label>
+              </fieldset>
+              <fieldset><label for="dropdown">What do you like to do</label>
+                <select id="dropdown">
+                  <option name="" value="">Select one option</option><hr>
+                  <option value="code" name="code">code</option><hr>
+                 <option value="play" name="play">play</option><hr>
+                  <option value="code&play" name="code&play">code&play</option>
+                </select>
+                <hr>
+        <p>Do you agree to Terms and Conditions</p>     <input type="radio" name="tell-me"
+                  value="not sure" id="no">
+           <label for="no">NO</label>
+                  <br>
+                    <input type="radio" name="tell-me" value="sure" id="yes">
+                    <label for="yes">YES</label><hr>
+                      <input type="checkbox" value="Yes" id="Checky">
+                                      <label for="Checky">Do you want to tell about us to others 
+       </label><br>
+                      <input type="checkbox" value="Yes" id="Completion">
+                 <label for="Completion">Will you try to complete it till end</label>
+                 <hr>       <label for="text">Any Comments</label>
+         <textarea value="comments" id="text" class="comment" size="50"> </textarea>
+                </fieldset>
+                <button id="submit">Submit</button>
+            </form>
+        </section>
+      </main>
+      </body>
+  </html>
