@@ -6,6 +6,7 @@ const __dirname=path.resolve();
 import multer from 'multer';
 const files=multer({dest:'uploaded files/'});
 app.use('/static',express.static('result'));
+app.use('/static',express.static('main'));
 const port=3000;
 app.get('/',(req,res)=>{
   app.use(express.static('main'));
@@ -15,7 +16,11 @@ app.get('/',(req,res)=>{
 app.post('/merge',files.array('Pdf',2),async(req,res,next)=>{
     console.log(req.files)
     await mergeit(path.join(__dirname,req.files[0].path),path.join(__dirname,req.files[1].path));
-    res.redirect("http://localhost:3000/static/merged.pdf")
+    res.redirect("http://localhost:3000/static/pdf after.html");
+    app.get('/download',(req,res)=>{
+      res.download(path.join(__dirname,"result/merged.pdf"));
+      /*res.redirect("http://localhost:3000/static/merged.pdf");*/
+    });
 })
 app.listen(port,()=>{
     console.log(`Your Localhost is https://localhost:${port}`);
